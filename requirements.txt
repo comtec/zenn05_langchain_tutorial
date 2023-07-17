@@ -3,3 +3,4 @@ openai
 langchain
 requests
 streamlit-chat
+beautifulsoup4
