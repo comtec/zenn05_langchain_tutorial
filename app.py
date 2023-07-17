@@ -49,8 +49,8 @@ def get_content(url):
         with st.spinner("Fetching Content ..."):
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
+            print(soup)
             # fetch text from main (change the below code to filter page)
-            print(soup.main)
             if soup.main:
                 return soup.main.get_text()
             elif soup.article:
