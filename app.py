@@ -50,6 +50,7 @@ def get_content(url):
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
             # fetch text from main (change the below code to filter page)
+            print(soup.main)
             if soup.main:
                 return soup.main.get_text()
             elif soup.article:
